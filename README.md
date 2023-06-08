@@ -5,30 +5,30 @@
 
 Binary search is a search algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to the middle element of the array. If they are not equal, the half in which the target cannot lie is eliminated and the search continues on the remaining half, again taking the middle element to compare to the target value, and repeating this until the target value is found. If the search ends with the remaining half being empty, the target is not in the array.
 
-The concept behind binary search is to "divide and conquer," continuously dividing the number of candidate elements in half at each iteration. This property enables the algorithm to have a time complexity of `O(log n)`.
+The concept behind binary search is to "divide and conquer" continuously dividing the number of candidate elements in half at each iteration. This property enables the algorithm to have a time complexity of `O(log n)`.
 
 ### Pros
-* `O(log n)` time complexity. It's one of the fastest search algorithms.
-* It's simple to implement.
-* It's easy to understand.
+* `O(log n)` time complexity. It's one of the fastest search algorithms;
+* It's simple to implement;
+* It's easy to understand;
 
 
 ### Cons
 * It only works on sorted arrays;
-* Time complexity for insertion is `O(log n)`. I put this as a cons because exists algorithms with `O(1)` time complexity for insertion, but that is not a big deal for many cases because `O(log n)` is still very good performance.
+* Time complexity for insertion is `O(log n)`. I put this as a cons because exists algorithms with `O(1)` time complexity for insertion, but that is not a big deal for many cases because `O(log n)` is still very good performance;
 
 
 ### Requirements
-* The array must be sorted.
-* To use the binary search algorithm, the array must be random-access, which means that elements can be accessed using their index.
-* The data stored in the array must be of a type that supports comparison. For example `a < b`, `a > b`, `a == b`.
-* The comparison used to search value in the array must be the same used to sort or insert values in the array.
+* The array must be sorted;
+* To use the binary search algorithm, the array must be random-access, which means that elements can be accessed using their index;
+* The data stored in the array must be of a type that supports comparison. For example `a < b`, `a > b`, `a == b`;
+* The comparison used to search value in the array must be the same used to sort or insert values in the array;
 
 ### Time complexity (Binary search vs. linear search)
 ![Time complexity](./docs/binary-search-vs-linear-search.png)
 In the previous graph, we can see the number of steps required to find a value increases very slowly as the size of the array increases using binary search in comparison with linear search.
 
-### Animate demo
+### Demo animation
 
 [Binary search vs linear search](https://www.cs.usfca.edu/~galles/visualization/Search.html)
 
@@ -145,7 +145,7 @@ var middle = left + ((right - left) >> 1);
 
 #### Return the complement of the index if the value is not found
 
-In the previous examples, I returned -1 when the value was not found. Using the condition index < 0 serves as an indicator that the value was not located. However, suppose we also want to use the same implementation to identify the next suitable index for inserting the value. In this scenario, the index `-1` is not particularly helpful.
+In the previous examples, I returned `-1` when the value was not found. Using the condition `index < 0` serves as an indicator that the value was not located. However, suppose we also want to use the same implementation to identify the next suitable index for inserting the value. In this scenario, the index `-1` is not particularly helpful.
 
 We know that when we attempt to search for a value in our sorted array, the algorithm will halt either when it finds the value or when it doesn't. If the value is not found, the left index will point to the position where the value should be inserted.
 
@@ -252,3 +252,6 @@ public class Person : IComparable<Person>
     }
 }
 ```
+
+
+[Medium Post](https://medium.com/@NelsonBN/algorithms-and-data-structuresbinary-search-a12594183c0d)
