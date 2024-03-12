@@ -254,4 +254,6 @@ public class Person : IComparable<Person>
 ```
 
 
-[Medium Post](https://medium.com/@NelsonBN/algorithms-and-data-structuresbinary-search-a12594183c0d)
+## References
+- [Other algoritmos & Data Structures](https://github.com/NelsonBN/algorithms-data-structures)
+- [Medium Post](https://medium.com/@NelsonBN/algorithms-and-data-structuresbinary-search-a12594183c0d)
